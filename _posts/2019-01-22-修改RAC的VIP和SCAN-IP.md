@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      RAC修VIP和SCAN-IP的操作过程
+title:      Oracle RAC修VIP和SCAN-IP的操作过程
 subtitle:   元鼎科技
 date:       2019-01-22
 author:     冯栋华
@@ -13,12 +13,13 @@ tags:
     - 案例
 ---
 
-#背景
+
+#背景#
 在客户现场经常需要做数据迁移，但是对于一些C/S软件架构的业务系统来说，数据迁移完成之后，经常需要修改终端机器的连接地址，会造成较大的工作量以及迁移风险，所以需要在数据迁移完成之后，将IP地址修改为原先的IP地址信息。
 
-#操作步骤
-##修改VIP过程
+#操作步骤#
 
+##修改VIP过程
 ###提前关闭所有实例
 srvctl stop database -d XXX
 ###更新ocr网络信息配置，root用户执行
@@ -43,7 +44,6 @@ eth0  192.168.20.0  global  public
 ###重启RAC集群服务
 crsctl stop crs
 crsctl start crs
-
 
 oifcfg getif
 oifcfg delif -global eth0/192.168.20.0
