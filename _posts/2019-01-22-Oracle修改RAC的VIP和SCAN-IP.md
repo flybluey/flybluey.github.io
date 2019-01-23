@@ -19,8 +19,9 @@ tags:
 
 # 操作步骤
 >下面的是修改VIP地址和SCAN地址的详细步骤。  
->如果需要添加SCAN地址，请查看另外文章。
->
+>如果需要添加SCAN地址，请查看另外文章。  
+  
+
 ## 修改VIP过程
 ### 提前关闭所有实例
 srvctl stop database -d XXX  
